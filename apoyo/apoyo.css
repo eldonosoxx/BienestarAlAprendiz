@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Títulos */
+.titulo_color {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #ffffff;
+    background-color: #00324D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.descripcion{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 17px;
+}
+
+.btn-open-form {
+    background-color: #39A900;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-open-form:hover {
+    background-color: #2d7f00;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    z-index: 9999; /* Asegúrate de que el modal esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Oculta la barra de desplazamiento del modal */
+    background-color: rgba(0,0,0,0.5); /* Fondo negro con opacidad */
+    padding-top: 50px; /* Espacio desde la parte superior */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%; /* Ajustar el ancho del modal */
+    max-width: 600px; /* Ancho máximo */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-height: 90vh; /* Altura máxima para que no se salga de la pantalla */
+    overflow-y: auto; /* Permite el desplazamiento interno del contenido */
+}
+
+.modal-title{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Asegúrate de que el contenido interno del modal se ajuste al tamaño del modal */
+.modal-content::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento para Webkit (Chrome, Safari) */
+}
+
+.modal-content {
+    -ms-overflow-style: none;  /* Oculta la barra de desplazamiento para IE y Edge */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento para Firefox */
+}
+
+/* Animación de entrada del modal */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-button {
+    color: #39A900;
+    float: right;
+    font-size: 30px; /* Tamaño más pequeño para ajustarse mejor */
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #2d7f00;
+}
+
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 100%; /* Ajustar el ancho para que se ajuste al modal */
+}
+
+form h3 {
+    margin-top: 0;
+    color: #00324D; /* Color del encabezado del formulario */
+    font-size: 22px; /* Ajustar tamaño del texto */
+    text-align: center;
+    border-bottom: 2px solid #39A900; /* Línea inferior verde */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fondo gris claro para las secciones */
+}
+
+.form-section h4 {
+    margin-top: 0;
+    color: #00324D; /* Color del encabezado de sección */
+    font-size: 18px;
+    border-bottom: 2px solid #39A900; /* Línea inferior verde */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px; /* Ajustar margen */
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 20px; /* Tamaño más pequeño para ajustar */
+    height: 20px;
+}
+
+form label {
+    display: block;
+    margin-left: 40px; /* Ajustar espacio para los íconos */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00324D;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form select {
+    margin-left: 40px; /* Ajustar espacio para los íconos */
+    width: calc(100% - 50px); /* Ajustar el ancho para el ícono */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; /* Ajustar tamaño del texto */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="time"]:focus,
+form select:focus {
+    border-color: #39A900; /* Color de borde al enfocar */
+    outline: none;
+}
+.form-submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-agregar {
+    background-color: #39A900; /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #2d7f00; /* Fondo verde oscuro al pasar el mouse */
+}
+
+/* Mensajes */
+.mensaje {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.error {
+    color: #f44336;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+.btn-admin {
+    background-color: #ff9800; /* Color naranja para el botón de administración */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-admin:hover {
+    background-color: #e68900; /* Color naranja más oscuro al pasar el mouse */
+}
+
+/* Estilo para el contenedor cuando no hay apoyos */
+.no-apoyos {
+    text-align: center;
+    padding: 20px;
+}
+
+.no-apoyos img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/*  */
+/* Estilo para el modal de edición */
+#edit-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#edit-modal .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    height: 70%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-edit {
+    background-color: #00324D; /* Color naranja para el botón de administración */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-edit:hover {
+    background-color: rgb(1, 35, 54); /* Color naranja más oscuro al pasar el mouse */
+}
+
+/* Estilo para el botón de cerrar en el modal de edición */
+.close-button-edit {
+    color: #39A900;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button-edit:hover,
+.close-button-edit:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para los formularios dentro del modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal-content button {
+    background-color: #39A900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal-content button:hover {
+    background-color: #287701;
+}
+
+/*  */
+
+.notification {
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: none; /* Ocultar por defecto */
+    z-index: 9999; /* Asegúrate de que esté encima del contenido */
+}
+
+.notification.success {
+    background-color: #39A900; /* Color verde para éxito */
+}
+
+.notification.error {
+    background-color: #e02417; /* Color rojo para error */
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.form-icon {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+
+/*  */
+/* Estilo del botón con clase .validacion */
+.validacion {
+    background-color: #39A900;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Ventana (background) */
+.ventana {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Encima de otros elementos */
+    right: 20px; /* A 20px desde el borde derecho */
+    bottom: 600px; /* A 20px desde el borde inferior */
+    width: 450px; /* Ancho fijo para la notificación */
+    height: 60px;
+    border-radius: 8px; /* Bordes redondeados */
+    color: #fff; /* Color del texto blanco */
+    padding: 15px; /* Espaciado interno */
+    font-size: 9px; /* Tamaño de fuente */
+    line-height: 1.4; /* Altura de línea para mejor legibilidad */
+}
+
+/* Contenido de la Ventana */
+.ventana-content {
+    background-color: #ff0303; /* Fondo del contenido de la ventana */
+    height: 40px;
+    padding: 7px;
+    border-radius: 8px; /* Bordes redondeados */
+    color: #fff; /* Color del texto blanco */
+    position: relative; /* Necesario para el posicionamiento del botón de cerrar */
+}
+
+/* El Botón de Cierre */
+.close {
+    color: #ffffff; /* Color del botón de cerrar */
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 3px; /* 10px desde la parte superior */
+    right: 10px; /* 10px desde el borde derecho */
+    cursor: pointer; /* Cambiar el cursor a mano */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.close:hover,
+.close:focus {
+    color: #fff; /* Color blanco al pasar el ratón o enfocar */
+    text-decoration: none;
+}
+
+/* Texto de validación */
+.texto-validacion {
+    color: #fff; /* Color del texto blanco para mejor contraste */
+}
