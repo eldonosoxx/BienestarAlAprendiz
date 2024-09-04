@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    text-decoration: none;
+}
+
+/* Estilo de las imágenes de los eventos */
+.event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Contenido del modal de detalles del evento */
+#eventDetailsContent {
+    text-align: center;
+}
+
+#eventDetailsContent img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.container__article {
+    max-width: 1400px;
+    padding: 10px 20px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container__article .box__article {
+    width: 350px;
+    height: auto; /* Ajusta automáticamente la altura */
+    background: var(--color-accent);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden; /* Asegura que el contenido no desborde */
+    text-align: center;
+    padding: 10px; /* Espacio alrededor del contenido */
+}
+
+.container__article .box__article .article-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #fff; /* Línea separadora entre imagen y texto */
+}
+
+.container__article .box__article .article-text {
+    color: #000000; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    padding: 10px;
+}
+
+/* Animación de desvanecimiento y desplazamiento para las cartas del artículo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container__article .box__article {
+    width: 350px;
+    height: auto;
+    background: var(--color-accent);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    opacity: 0; /* Comenzar con la carta invisible */
+    animation: fadeInUp 1s forwards; /* Aplicar la animación */
+}
+
+/* Ajuste para que la animación sea secuencial */
+.container__article .box__article:nth-child(1) { animation-delay: 0s; }
+.container__article .box__article:nth-child(2) { animation-delay: 0.2s; }
+.container__article .box__article:nth-child(3) { animation-delay: 0.4s; }
+.container__article .box__article:nth-child(4) { animation-delay: 0.6s; }
+.container__article .box__article:nth-child(5) { animation-delay: 0.8s; }
+.container__article .box__article:nth-child(6) { animation-delay: 1s; }
+.container__article .box__article:nth-child(7) { animation-delay: 1.2s; }
+.container__article .box__article:nth-child(8) { animation-delay: 1.4s; }
+
+
+
+/*  */
+
+.quiz {
+    text-align: center;
+    background: #eff2f47d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.quiz h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.quiz-question p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.quiz button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #39A900;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quiz button:hover {
+    background-color: #236203;
+}
+
+.quiz-result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*  */
+
+/* Títulos */
+.titulo_color {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #ffffff;
+    background-color: #00324D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}

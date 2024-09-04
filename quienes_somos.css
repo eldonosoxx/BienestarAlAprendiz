@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Títulos */
+.titulo-llamativo {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #ffffff;
+    background-color: #00324D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.titulo-llamativo h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para el contenedor de la imagen */
+.imagen-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.imagen-info img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados para un efecto suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.36); /* Sombra ligera para destacar la imagen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para el contenedor del texto después del título */
+.texto-principal {
+    max-width: 1200px; /* Ajustar el ancho máximo para mejorar la legibilidad */
+    margin: 20px auto; /* Centrar el contenedor y añadir margen superior e inferior */
+    padding: 20px; /* Añadir relleno interno */
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+    text-align: center;
+}
+
+.texto-principal h2 {
+    font-size: 20px; /* Ajustar el tamaño del título */
+    color: #494747; /* Color del texto */
+}
+
+.texto-principal p {
+    font-size: 20px; /* Ajustar el tamaño del texto */
+    line-height: 1.6; /* Mejorar el espaciado entre líneas */
+    color: #000000; /* Color del texto para mejor legibilidad */
+}
+
+/*  */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.cards-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+    height: 510px;
+    text-align: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.card img {
+    width: 240px;
+    height: 280px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card button {
+    background-color: #39A900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #2a7b02;
+}
+
+.phone-number {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.arrow {
+    background-color: #00324D;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 1px;
+}
+

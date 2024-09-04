@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    text-decoration: none;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* Calendario */
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-nav h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.calendar-nav button {
+    background-color: #00324D;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.calendar-nav button:hover {
+    background-color: #011e2e;
+}
+
+/* Tabla del calendario */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+.calendar .header {
+    background-color: #00324D;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.calendar .day {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    min-height: 100px;
+    position: relative;
+}
+
+.calendar .day:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar .event {
+    background-color: #00324D;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover, .event:hover {
+    background-color: #011e2e;
+    transform: scale(1.05);
+}
+
+.calendar .event img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.titulo_card {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.img_card {
+    border-radius: 20px;
+}
+
+/* Modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 2% auto;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form label {
+    margin-top: 0.5rem;
+}
+
+.modal form input,
+.modal form textarea {
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal form button {
+    margin-top: 1rem;
+    background-color: #00324D;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal form button:hover {
+    background-color: #00324D;
+}
+
+/* Estilo de los botones */
+button, .btn-volver {
+    background-color: #39A900;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, .btn-volver:hover {
+    background-color: #246c00;
+    transform: scale(1.05);
+}
+
+button:active, .btn-volver:active {
+    background-color: #00324D;
+    transform: scale(0.98);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .calendar-nav h2 {
+        font-size: 1.25rem;
+    }
+
+    .calendar-nav button {
+        font-size: 0.9rem;
+    }
+
+    .titulo {
+        font-size: 35px;
+    }
+
+    .titulo_card {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .calendar {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .calendar .day {
+        min-height: 80px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .titulo_card {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .calendar {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .calendar .day {
+        min-height: 60px;
+        padding: 0.3rem;
+    }
+
+    .titulo {
+        font-size: 25px;
+    }
+
+    .titulo_card {
+        font-size: 18px;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+        margin: 5% auto;
+        padding: 1rem;
+    }
+
+    button, .btn-volver {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .calendar {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .calendar .day {
+        min-height: 50px;
+        padding: 0.2rem;
+    }
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    .titulo_card {
+        font-size: 16px;
+    }
+}

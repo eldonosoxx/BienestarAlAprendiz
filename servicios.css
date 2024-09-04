@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Títulos */
+.titulo_color {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #ffffff;
+    background-color: #00324D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo_color2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #ffffff;
+    background-color: #00324D;
+    border-radius: 10px;
+}
+
+/* Estilo del Contenedor de Servicios */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los cuadros */
+    justify-content: center;
+    padding: 40px;
+}
+
+/* Estilo de cada cuadro de servicio */
+.service {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Gradiente de fondo suave */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    width: 100%;
+    max-width: 400px; /* Máximo ancho */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Transiciones suaves */
+    position: relative; /* Para colocar un icono */
+    overflow: hidden; /* Para asegurarse de que el contenido no se desborde */
+}
+
+/* Efecto de hover para el cuadro de servicio */
+.service:hover {
+    transform: translateY(-8px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+
+/* Títulos dentro del cuadro de servicio */
+.service h3 {
+    font-size: 1.6rem; /* Tamaño de fuente ajustado */
+    color: #00324D; /* Color del título */
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700; /* Negrita */
+    position: relative;
+    padding-bottom: 10px; /* Espaciado adicional */
+}
+
+/* Agregar un borde inferior a los títulos */
+.service h3::after {
+    content: '';
+    display: block;
+    width: 80%; /* Ancho de la línea */
+    height: 4px; /* Altura de la línea */
+    background: #39A900; /* Color de la línea */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); /* Centrar la línea */
+}
+
+/* Párrafos dentro del cuadro de servicio */
+.service p {
+    color: #333; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    text-align: justify; /* Justificación del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    padding: 0; /* Sin padding horizontal */
+}
+
+/* Estilo para el fondo de texto */
+.service p {
+    border-radius: 6px; /* Bordes redondeados para el fondo */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Sección de Citas */
+#events {
+    background-color: #00324D;
+    text-align: center;
+    padding: 60px;
+    color: #ffffff;
+    margin-bottom: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #39A900;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2c8002;
+    transform: scale(1.05);
+}
+
+/* Contenedor de Imágenes */
+.container_img {
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de Zoom y Sombra */
+.imagen_servicios {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Para asegurar que la imagen no se desborde */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agregado para la transición suave */
+}
+
+.imagen_servicios:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+.img_serv {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Agregado para la transición suave */
+}
+
+/* Efecto de Saturación */
+.imagen_servicios:hover .img_serv {
+    filter: brightness(1.2) saturate(1.2); /* Aumenta el brillo y la saturación para un efecto más vívido */
+}
+
+
+
+/* Estilo del botón con clase .validacion */
+.validacion {
+    background-color: #39A900;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Ventana (background) */
+.ventana {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Encima de otros elementos */
+    right: 20px; /* A 20px desde el borde derecho */
+    bottom: 600px; /* A 20px desde el borde inferior */
+    width: 450px; /* Ancho fijo para la notificación */
+    height: 60px;
+    border-radius: 8px; /* Bordes redondeados */
+    color: #fff; /* Color del texto blanco */
+    padding: 15px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño de fuente */
+    line-height: 1.4; /* Altura de línea para mejor legibilidad */
+}
+
+/* Contenido de la Ventana */
+.ventana-content {
+    background-color: #ff0303; /* Fondo del contenido de la ventana */
+    height: 40px;
+    padding: 7px;
+    border-radius: 8px; /* Bordes redondeados */
+    color: #fff; /* Color del texto blanco */
+    position: relative; /* Necesario para el posicionamiento del botón de cerrar */
+}
+
+/* El Botón de Cierre */
+.close {
+    color: #ffffff; /* Color del botón de cerrar */
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute; /* Posicionamiento absoluto */
+    top: 4px; /* 10px desde la parte superior */
+    right: 10px; /* 10px desde el borde derecho */
+    cursor: pointer; /* Cambiar el cursor a mano */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+.close:hover,
+.close:focus {
+    color: #fff; /* Color blanco al pasar el ratón o enfocar */
+    text-decoration: none;
+}
+
+/* Texto de validación */
+.texto-validacion {
+    color: #fff; /* Color del texto blanco para mejor contraste */
+}

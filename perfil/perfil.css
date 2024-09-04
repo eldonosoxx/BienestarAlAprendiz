@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+.profile-container {
+    max-width: 35%;
+    margin: 20px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-headers {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    border-bottom: 3px solid #39A900;
+}
+
+.profile-headers h1 {
+    margin: 0;
+    color: #00274D;
+    font-size: 2.6em;
+    font-weight: bold;
+}
+
+.profile-headers p {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #39A900;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-icon:hover {
+    color: #236900;
+    transform: scale(1.1);
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.profile-detail {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-detail:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.profile-detail h2 {
+    font-size: 1.7em;
+    margin-top: 0;
+    color: #00274D;
+    border-bottom: 3px solid #39A900;
+    padding-bottom: 10px;
+}
+
+.profile-detail p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.form-container {
+    display: none;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form-container.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.form-container.hide {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.form-container h2 {
+    margin-top: 0;
+    color: #00274D;
+    border-bottom: 3px solid #39A900;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #39A900;
+    box-shadow: 0 0 5px rgba(57, 169, 0, 0.5);
+    outline: none;
+}
+
+.form-group input[type="submit"] {
+    background-color: #39A900;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #236402;
+    transform: scale(1.05);
+}
+
+.message {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 1s ease-out;
+}
+
+.message.success {
+    background-color: #28a745;
+}
+
+.message.error {
+    background-color: #dc3545;
+}
+
+.fade-out.hidden {
+    opacity: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .profile-container {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .profile-headers h1 {
+        font-size: 2.5em;
+    }
+
+    .profile-headers p {
+        font-size: 1.4em;
+    }
+
+    .edit-icon {
+        font-size: 1.5em;
+    }
+
+    .profile-detail {
+        padding: 15px;
+    }
+
+    .profile-detail h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-detail p {
+        font-size: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input {
+        padding: 12px;
+    }
+
+    .form-group input[type="submit"] {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .profile-headers h1 {
+        font-size: 2.2em;
+    }
+
+    .profile-headers p {
+        font-size: 1.3em;
+    }
+
+    .edit-icon {
+        font-size: 1.3em;
+    }
+
+    .profile-detail {
+        padding: 12px;
+    }
+
+    .profile-detail h2 {
+        font-size: 1.4em;
+    }
+
+    .profile-detail p {
+        font-size: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group input {
+        padding: 10px;
+    }
+
+    .form-group input[type="submit"] {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-headers h1 {
+        font-size: 1.8em;
+    }
+
+    .profile-headers p {
+        font-size: 1em;
+    }
+
+    .edit-icon {
+        font-size: 1em;
+    }
+
+    .profile-detail {
+        padding: 10px;
+    }
+
+    .profile-detail h2 {
+        font-size: 1.2em;
+    }
+
+    .profile-detail p {
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-group input {
+        padding: 8px;
+    }
+
+    .form-group input[type="submit"] {
+        font-size: 0.9em;
+    }
+}

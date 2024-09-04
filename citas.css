@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Títulos */
+.titulo{
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: #ffffff;
+    background-color: #00324D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Títulos */
+.titulo2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: #181818;
+    
+}
+
+/* Estilos para el formulario */
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 800px; /* Ancho máximo para el formulario */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Para posicionar iconos absolutamente */
+}
+
+form h3 {
+    margin-top: 0;
+    color: #00324D; /* Color del encabezado del formulario */
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 2px solid #39A900; /* Línea inferior verde */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Fondo gris claro para las secciones */
+}
+
+.form-section h4 {
+    margin-top: 0;
+    color: #00324D; /* Color del encabezado de sección */
+    font-size: 20px;
+    border-bottom: 2px solid #39A900; /* Línea inferior verde */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-icon {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+form label {
+    display: block;
+    margin-left: 50px; /* Espacio para los íconos */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00324D;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form select {
+    margin-left: 50px; /* Espacio para los íconos */
+    width: calc(100% - 40px); /* Ajusta el ancho para el ícono */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="time"]:focus,
+form select:focus {
+    border-color: #39A900; /* Color de borde al enfocar */
+    outline: none;
+}
+
+.btn-agregar {
+    background-color: #39A900; /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #2d7f00; /* Fondo verde oscuro al pasar el mouse */
+}
+
+/* Mensajes */
+.mensaje {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.error {
+    color: #f44336;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilos para el Modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    z-index: 9999; /* Asegúrate de que el modal esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fondo negro con opacidad */
+    padding-top: 100px; /* Espacio desde la parte superior */
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 30px;
+    border: 2px solid #39A900; /* Borde verde brillante */
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 0.4s ease; /* Animación de entrada */
+}
+
+/* Animación de entrada del modal */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-button {
+    color: #39A900;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #2d7f00;
+}
+
+#modalMessage {
+    font-size: 20px;
+    text-align: center;
+    color: #333; /* Color del texto */
+    margin: 20px 0;
+}
+
+.btn-agregar {
+    background-color: #39A900; /* Fondo verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #2d7f00; /* Fondo verde oscuro al pasar el mouse */
+}
+
+/* Estilo del botón con clase .validacion */
+.validacion {
+    /* Añade aquí los estilos deseados para el botón */
+    background-color: #39A900;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Ventana (background) */
+.ventana {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Ventana Content */
+.ventana-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 12%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.texto-validacion{
+    color: #000000;
+}
+
+/*  */
+
+.notification {
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: none; /* Ocultar por defecto */
+    z-index: 9999; /* Asegúrate de que esté encima del contenido */
+}
+
+.notification.success {
+    background-color: #39A900; /* Color verde para éxito */
+}
+
+.notification.error {
+    background-color: #e02417; /* Color rojo para error */
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.form-icon {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
